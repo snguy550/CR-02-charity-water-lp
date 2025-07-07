@@ -1,47 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Lives with Just $10</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Proxima Nova', serif;
+      background-color: #ffc907;
+      color: #fff7e1;
+      text-align: center;
+    }
+
+    .hero {
+      background: url('https://cdn2.dropmarkusercontent.com/52043/2efe9dec32f5a2ea4c870ee2b69ecd24310d034b17775719b43744f58c855b28/preview/Ambote-CharityWater-08483.jpg?Expires=1751855730&Signature=UkajzBNprtWtFs3iWJIIqVZ9VyqWZQJqiPPoXIyYV2Mutzy8D4JFjSWU-VSQUlDb0D-8Ct1ZFGuQ0PhZTxcHoBVGMCTCGJZ10qlwv8xq3rKWiJ4n4wY1jwfbpE6Q01dIoJ5RPTdEUHBvRKIp0HFyAowHVYPKzyfddPwU7BithDN~n3-fPx9CoRp5ZD~7lmWZJJlDH3zCfaBrD5QOBRGwU2-zmo~QMFcv2wrpEWDzr~YqvzIvdF0ZyU9eWOSNvdxfkcZVwYMCpO9Ic2m61m6wtlMq9z-WddfqMF3qKD2UHX40ZmOTjYplP0bkDQfqkFAnGaPyiPIHdYkJi7cvek9PgA__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ') no-repeat center center/cover;
+      padding: 80px 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background-color: rgba(0, 0, 0, 0.4); /* Transparent black background */
+      border-radius: 10px; /* Rounded corners */
+      padding: 10px 20px;  /* Space around the logo */
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .headline {
+      font-size: 42px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .subheadline {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      padding: 0 10px;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      background-color: #fff7e1;
+      color: #FFC907;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .cta-button:hover {
+      background-color: #fff7e1;
+    }
+
+    .images-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .images-section img {
+      width: 260px; /* Increased from 200px to 260px for larger images */
+      height: 260px; /* Increased from 200px to 260px for larger images */
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 12px;
+    }
+
+    .email-form {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .email-form input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .email-form input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #fff7e1;
+      color:#FFC907;
+;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .email-form input[type="submit"]:hover {
+      background-color: #eee;
+    }
+
+    /* MEDIA QUERIES FOR RESPONSIVENESS */
+    /* Media queries allow different styles for different screen sizes. */
+    @media (max-width: 768px) {
+      .headline {
+        font-size: 32px;
+        padding: 8px 16px;
+      }
+
+      .subheadline, .description {
+        font-size: 16px;
+        padding: 0 15px;
+      }
+
+      .cta-button {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+
+      .logo {
+        flex-direction: column;
+        font-size: 20px;
+      }
+
+      .email-form input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .email-form input[type="submit"] {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .headline {
+        font-size: 24px;
+      }
+
+      .logo img {
+        height: 30px;
+      }
+
+      .images-section img {
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <div class="hero">
+    <div class="logo">
+      <img src="/img/cw_logo-2.png" >
+    </div>
+    <div class="headline">Change Lives with Just $10</div>
+    <div class="subheadline">
+      100% of your donation funds clean water projects, with real-time updates that show the lives you’ve changed.
+    </div>
+    <div class="description">
+      At charity: water, we support the people you see below. Any exposure or donation helps these kids and their families get access to clean water. Your $10 donation can provide clean water for one person for 10 years. Join us in making a difference today!
+    </div>
+    <a href="mailto:donate@example.com" class="cta-button">Donate Now</a>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+    <div class="email-form">
+      <!-- Use a relative or blank action so GitHub Pages doesn't break the form -->
+      <form action="" method="post">
+        <label for="email">Want to learn more?</label><br><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="submit" value="Get Info">
+      </form>
+    </div>
+  </div>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <div class="images-section">
+    <img src="https://cdn2.dropmarkusercontent.com/52043/0ae2cbfab801688cbce6c8777c0f6487a62a7df5/JS_20170307_3314.jpg?Expires=1751849472&Signature=KPTa9xmMyrH9h7-xotrI38HaaBtJ0rYw7VR4jte~p5a-yY45wxtbHcB2yDjDU2pzAuVgweCinMThkqluJiQjihcZamHfd6UcdLNcvNYF1QwJRdv3-0V-gi6bjIv5pwq6Jh-r1PsrTfbuzIAD45s25AjKQO6nwMOeVydqLlR4PpY1yqFmppLrZTaA2g1ctuWfeTwhOzVLQzULNG1LJlnfvQxcZKBAwUdKenBHCDsN7yEEd1Es32BQ5FgFrQGu9AGBKH9odDlXj95eQJKLdNB1sgN5BoZxn7yO88AdxyLH6h9zNzHDUOgLR97ADfPs6mhYeHQYeCjy~OdNDmS8goV~XQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ" alt="Clean water project">
+    <img src="https://d35lvrk9fb4ftj.cloudfront.net/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzLzI3YWNhZWIxNGZkN2Q0NmYwZTM4YzdlMWY1NTZjMDk3MTM0OGU3MWEvMjAxNzAzMDItSU1HXzY4MDItMy5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjYwMCwiaGVpZ2h0Ijo2MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX19fQ==" alt="Happy child with water">
+    <img src="https://d35lvrk9fb4ftj.cloudfront.net/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzL2VhMzg1NzY2NTcxMzM5ZjA0YjZlN2VkYWQwNjUwMjAyMzY2OGY3N2IvSlNfMjAxNzAzMDNfMDc0M19wcmV2aWV3LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NjAwLCJoZWlnaHQiOjYwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfX19" alt="Water pump installation">
+    <img src="https://d35lvrk9fb4ftj.cloudfront.net/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzLzc1NTk5NmViZTA1ZGRiZTA2ODdjOGJjNDU2NWFjZWJkMmU2N2VhMzYvcHJldmlldy9Sd2FuZGEtMjAxOC1tYXJjaC1jdy1jdWJieWdyYWhhbS0xMDg4LmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NjAwLCJoZWlnaHQiOjYwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfX19" alt="Smiling community">
+  </div>
 </body>
 </html>
